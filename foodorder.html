@@ -1,0 +1,88 @@
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restuarant</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+   
+    <link rel="stylesheet" href="style.css">
+
+
+<body>
+<header>
+
+    <a href="#" class="logo"><i class="fas fa-utensils"></i>Restaurant</a>
+
+    <div id="menu-bar" class="fas fa-bars"></div>
+
+    <nav class="navbar">
+       
+<a href="#" onclick="history.back()"><b>BACK</b></a>
+ 
+    </nav>
+
+</header>
+
+
+<section class="order" id="order">
+     <<br><br><br><br><br><br>
+
+    <h1 class="heading"> <span> Your Order</span> Details </h1>
+   
+    <div class="row">
+        
+        <div class="image">
+            <img src="online.jpg" alt="">
+        </div>
+
+<form action="#">
+<div class="label">
+<label>
+First Name:
+<input name="fname" style="font-size: 20px;" size="20px"  maxlength="25" type="text" id="fname" 
+readonly="readonly" />
+</label><br><br>
+<label>
+Email:
+<input name="email"style="font-size: 20px;" size="20px" maxlength="25" type="text" id="email" 
+readonly="readonly" /></label><br><br>
+
+<label>
+Mobile No:
+<input name="phone"style="font-size: 20px;"  maxlength="10" type="number" id="phone" 
+readonly="readonly" />
+</label><br><br>
+
+<label>
+Address:
+<input name="address"style="font-size: 20px;" size="20" maxlength="25" type="text" id="address" 
+readonly="readonly" />
+</label><br><br>
+</div>
+
+<script type="text/javascript">
+ var storedVal = document.getElementById("fname");
+    storedVal.value = localStorage.getItem("fname");
+
+var storedVal = document.getElementById("email");
+    storedVal.value = localStorage.getItem("email");
+
+var storedVal = document.getElementById("phone");
+    storedVal.value = localStorage.getItem("phone");
+
+var storedVal = document.getElementById("address");
+    storedVal.value = localStorage.getItem("address");
+
+</script>
+  
+   <a href="payment.html" class="btn">PAYMENT</a><br><br>
+  
+
+</form>
+</div>
+
+</section>
+</body>
+</html>

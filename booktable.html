@@ -1,0 +1,93 @@
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restuarant</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+   
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+
+
+<header>
+
+    <a href="#" class="logo"><i class="fas fa-utensils"></i>Restaurant</a>
+
+    <div id="menu-bar" class="fas fa-bars"></div>
+
+    <nav class="navbar">
+       
+<a href="#" onclick="history.back()"><b>BACK</b></a>
+ 
+    </nav>
+
+</header>
+
+
+<section class="order" id="order">
+     <<br><br><br><br><br><br>
+
+    <h1 class="heading"> <span>Book</span> Table </h1>
+
+    <div class="row">
+        
+        <div class="image">
+            <img src="table.jpg" alt="">
+        </div>
+        <form name="myForm" action="valid.html"   onsubmit="return validateForm()" method="post">
+      
+
+            <div class="inputBox">
+                <input type="text" placeholder="name" name="fname" id="fname" required>
+                <input type="email" placeholder="email" name="email" id="email" required>
+            </div>
+
+            <div class="inputBox">
+                <input type="number" placeholder="phonenumber" name="phone" id="phone" required>
+                <input type="date" placeholder="date" name="date" id="date" min="2023-01-12" max="2023-01-31" required>
+            </div>
+
+            <textarea placeholder="address" name="address" id="address" cols="30" rows="10" required></textarea>
+
+           
+<input type="submit" value="Book Table"  onclick="saveVal()" class="btn">
+              <input type="reset" value="reset" class="btn">
+
+<script type="text/javascript"> 
+ function saveVal() {
+    var inputFirst = document.getElementById("fname").value;
+    localStorage.setItem("fname", inputFirst);
+    inputFirst = localStorage.getItem("fname");
+
+var inputFirst = document.getElementById("email").value;
+    localStorage.setItem("email", inputFirst);
+    inputFirst = localStorage.getItem("email");
+
+var inputFirst = document.getElementById("phone").value;
+    localStorage.setItem("phone", inputFirst);
+    inputFirst = localStorage.getItem("phone");
+
+var inputFirst = document.getElementById("address").value;
+    localStorage.setItem("address", inputFirst);
+    inputFirst = localStorage.getItem("address");
+
+var inputFirst = document.getElementById("date").value;
+    localStorage.setItem("date", inputFirst);
+    inputFirst = localStorage.getItem("date");
+
+}
+
+</script>
+
+
+        </form>
+
+    </div>
+
+</section>
+</body>
+</html>
